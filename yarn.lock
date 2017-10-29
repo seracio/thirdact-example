@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@seracio/thirdact@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@seracio/thirdact/-/thirdact-0.3.3.tgz#94fee5c00283d48259a584e4d046cedf66a19b0b"
+"@seracio/thirdact@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@seracio/thirdact/-/thirdact-0.3.5.tgz#18a46b5740bc87642e4ce8df161495f8b9734c50"
 
 "@seracio/xstream-connect@^4.0.0":
   version "4.0.0"
