@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@seracio/thirdact@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@seracio/thirdact/-/thirdact-0.3.0.tgz#1f2f562f8e6ff453cc85fe079111d1a473a35fec"
+"@seracio/thirdact@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@seracio/thirdact/-/thirdact-0.3.2.tgz#9b37dd3341e0bf02bd59d7d51d574ff3d183ea71"
 
 "@seracio/xstream-connect@^4.0.0":
   version "4.0.0"
@@ -4113,6 +4113,10 @@ lodash.cond@^4.3.0:
 lodash.defaults@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
+
+lodash.kebabcase@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.kebabcase/-/lodash.kebabcase-4.1.1.tgz#8489b1cb0d29ff88195cceca448ff6d6cc295c36"
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
