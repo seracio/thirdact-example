@@ -1,5 +1,6 @@
 {
   "name": "thirdact-example",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,9 +23,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "flow-bin": "^0.57.3"
+    "flow-bin": "^0.57.3",
+    "gh-pages": "^1.0.0"
   }
 }
