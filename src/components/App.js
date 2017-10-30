@@ -66,7 +66,7 @@ const App = ({ data }: Props) => {
                         </Transition>
                     </Selection>
                     <Selection type="exit">
-                        <Transition duration={500}>
+                        <Transition duration={1000}>
                             <circle cy={250} r={5} />
                         </Transition>
                         <Transition duration={500}>

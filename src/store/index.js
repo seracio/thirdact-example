@@ -4,8 +4,8 @@ import { interpolateGnBu } from 'd3-scale-chromatic';
 import xs from 'xstream';
 
 export const data$ = xs
-    // each seconds
-    .periodic(1500)
+    // each two seconds
+    .periodic(2000)
     //
     .map(tick => {
         const numElements = Math.floor(Math.random() * 15);
