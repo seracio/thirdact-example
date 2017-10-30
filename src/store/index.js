@@ -9,7 +9,7 @@ export const data$ = xs
     //
     .map(tick => {
         const numElements = Math.floor(Math.random() * 15);
-        return range(0, numElements).map(() => interpolateGnBu(Math.random()));
+        return range(0, numElements).map(i => interpolateGnBu(i / numElements));
     })
     // memory
     .remember();

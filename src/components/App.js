@@ -22,53 +22,61 @@ const App = ({ data }: Props) => {
         .range([100, 400]);
 
     return (
-        <svg
-            preserveAspectRatio="xMinYMin meet"
-            viewBox={`0 0 ${size} ${size}`}
+        <div
+            style={{
+                margin: 'auto',
+                width: '100%',
+                maxWidth: '900px',
+                maxHeight: '100vh'
+            }}
         >
-            <text
-                x={size / 2}
-                y={50}
-                style={{
-                    alignmentBaseline: 'middle',
-                    textAnchor: 'middle',
-                    fontFamily: 'sans-serif'
-                }}
+            <svg
+                preserveAspectRatio="xMidYMid meet"
+                viewBox={`0 0 ${size} ${size}`}
             >
-                Hello thirdact
-            </text>
-            <SelectAll data={data} selector={'.circle'} root={<g />}>
-                <Selection type="enter">
-                    <Append>
-                        <circle
-                            className="circle"
-                            cx={(d, i) => scaleX(i)}
-                            cy={100}
-                            r={10}
-                            fill={'transparent'}
-                        />
-                    </Append>
-                    <Transition duration={1000}>
-                        <circle cy={200} fill={d => d} />
-                    </Transition>
-                </Selection>
-                <Selection type="update">
-                    <Transition duration={1000}>
-                        <circle
-                            cy={200}
-                            cx={(d, i) => scaleX(i)}
-                            fill={d => d}
-                        />
-                    </Transition>
-                </Selection>
-                <Selection type="exit">
-                    <Transition duration={1000}>
-                        <circle cy={300} fill={'transparent'} />
-                    </Transition>
-                    <Remove />
-                </Selection>
-            </SelectAll>
-        </svg>
+                <text
+                    x={size / 2}
+                    y={50}
+                    style={{
+                        alignmentBaseline: 'middle',
+                        textAnchor: 'middle',
+                        fontFamily: 'sans-serif'
+                    }}
+                >
+                    Hello thirdact
+                </text>
+                <SelectAll data={data} selector={'.circle'} root={<g />}>
+                    <Selection type="enter">
+                        <Append>
+                            <circle
+                                className="circle"
+                                cx={(d, i) => scaleX(i)}
+                                cy={100}
+                                r={10}
+                                style={{ fill: 'transparent' }}
+                            />
+                        </Append>
+                        <Transition duration={1000}>
+                            <circle cy={200} style={{ fill: d => d }} />
+                        </Transition>
+                    </Selection>
+                    <Selection type="update">
+                        <Transition duration={1000}>
+                            <circle cx={(d, i) => scaleX(i)} />
+                        </Transition>
+                    </Selection>
+                    <Selection type="exit">
+                        <Transition duration={500}>
+                            <circle cy={250} r={5} />
+                        </Transition>
+                        <Transition duration={500}>
+                            <circle cy={400} style={{ fill: 'transparent' }} />
+                        </Transition>
+                        <Remove />
+                    </Selection>
+                </SelectAll>
+            </svg>
+        </div>
     );
 };
 
