@@ -1,6 +1,5 @@
 // @flow
 import { range } from 'd3-array';
-import { interpolateGnBu } from 'd3-scale-chromatic';
 import xs from 'xstream';
 
 export const data$ = xs
@@ -9,7 +8,7 @@ export const data$ = xs
     //
     .map(tick => {
         const numElements = Math.floor(Math.random() * 15);
-        return range(0, numElements).map(i => interpolateGnBu(i / numElements));
+        return range(0, numElements);
     })
     // memory
     .remember();

@@ -57,17 +57,27 @@ const App = ({ data }: Props) => {
                             />
                         </Append>
                         <Transition duration={1000}>
-                            <circle cy={200} style={{ fill: d => d }} />
+                            <circle
+                                cy={200}
+                                style={{
+                                    fill: 'blue'
+                                }}
+                            />
                         </Transition>
                     </Selection>
                     <Selection type="update">
                         <Transition duration={1000}>
-                            <circle cx={(d, i) => scaleX(i)} />
+                            <circle
+                                cx={(d, i) => scaleX(i)}
+                                style={{
+                                    fill: 'red'
+                                }}
+                            />
                         </Transition>
                     </Selection>
                     <Selection type="exit">
                         <Transition duration={1000}>
-                            <circle cy={250} r={5} />
+                            <circle cy={250} r={5} style={{ fill: 'green' }} />
                         </Transition>
                         <Transition duration={500}>
                             <circle cy={400} style={{ fill: 'transparent' }} />
